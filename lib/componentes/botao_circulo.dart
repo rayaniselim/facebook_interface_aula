@@ -18,7 +18,7 @@ class BotaoCirculo extends StatelessWidget {
         color: Colors.grey[200],
         shape: BoxShape.circle,
       ),
-      margin: EdgeInsets.all(6),
+      margin: const EdgeInsets.all(6),
       child: IconButton(
         onPressed: onPressed,
         icon: Icon(icone),
