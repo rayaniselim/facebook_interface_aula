@@ -1,4 +1,4 @@
-import 'package:facebook_interface_aula/data/dados.dart';
+import 'package:facebook_interface_aula/data/user_data.dart';
 import 'package:facebook_interface_aula/componentes/card_story.dart';
 import 'package:facebook_interface_aula/models/models.dart';
 import 'package:flutter/material.dart';
@@ -29,20 +29,19 @@ class AreaStory extends StatelessWidget {
             Story storyUser = Story(
               user: userAtual,
               urlImage: userAtual.urlImage,
-              foiVisualizado: true,
+              foiVisualizado: false,
             );
+
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 4,
               ),
               child: CardStory(
-                adicionarStory: true,
                 story: storyUser,
               ),
             );
           }
-
-          Story story = storys[indice - 1];
+          Story story = storys[indice];
 
           return Padding(
             padding: const EdgeInsets.symmetric(
@@ -50,6 +49,7 @@ class AreaStory extends StatelessWidget {
             ),
             child: CardStory(
               story: story,
+              adicionarStory: true,
             ),
           );
         },

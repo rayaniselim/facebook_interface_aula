@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:facebook_interface_aula/componentes/image_perfil.dart';
 import 'package:facebook_interface_aula/uteis/paleta_cores.dart';
 import 'package:flutter/material.dart';
 
@@ -31,10 +32,34 @@ class CardStory extends StatelessWidget {
         Container(
           height: double.infinity,
           width: 110,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
             gradient: PaletaCores.gradientStory,
           ),
-        )
+        ),
+        Positioned(
+          top: 8,
+          left: 8,
+          child: adicionarStory
+              ? Container(
+                  height: 40,
+                  width: 40,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    icon: const Icon(Icons.add),
+                    iconSize: 30,
+                    color: PaletaCores.azulFacebook,
+                    onPressed: () {},
+                  ))
+              : ImagePerfil(
+                  urlImage: story.user.urlImage,
+                  foiVizualizado: story.foiVizualisado,
+                ),
+        ),
       ],
     );
   }

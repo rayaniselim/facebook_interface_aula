@@ -1,11 +1,12 @@
 import 'package:facebook_interface_aula/componentes/botao_circulo.dart';
-import 'package:facebook_interface_aula/data/dados.dart';
+import 'package:facebook_interface_aula/data/user_data.dart';
 import 'package:facebook_interface_aula/uteis/paleta_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
 import '../componentes/area_criar_postagem.dart';
 import '../componentes/area_story.dart';
+import '../data/story_data.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
